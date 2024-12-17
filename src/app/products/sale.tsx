@@ -45,9 +45,9 @@ export default function Top_sell (){
             <h1 className="text-4xl font-extrabold p-12 text-center">TOP SELLING</h1>
             <div className="flex justify-between pl-32 pr-32">
                 {
-                    product.map((data) =>{
-                        return(
-                         <div> 
+                      product.map((data, index) => {
+                        return (
+                          <div key={data.id || index}> {/* Key Added Here */}
                            
                             <div className="w-[220px] h-[260x] rounded-2xl bg-[#F0EEED]">
                             <Image src={data.img_url} alt={data.title} 
